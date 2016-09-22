@@ -26,11 +26,11 @@ open class Permission: NSObject {
     public typealias Callback = (PermissionStatus) -> Void
 
     /// The permission to access the user's contacts.
-    @available(iOS 9.0, *)
-    open static let contacts = Permission(type: .contacts)
+//    @available(iOS 9.0, *)
+//    open static let contacts = Permission(type: .contacts)
     
     /// The permission to access the user's address book. (Deprecated in iOS 9.0)
-    open static let addressBook = Permission(type: .addressBook)
+//    open static let addressBook = Permission(type: .addressBook)
     
     /// The permission to access the user's location when the app is in background.
     open static let locationAlways = Permission(type: .locationAlways)
@@ -39,29 +39,29 @@ open class Permission: NSObject {
     open static let locationWhenInUse = Permission(type: .locationWhenInUse)
     
     /// The permission to access the microphone.
-    open static let microphone = Permission(type: .microphone)
+//    open static let microphone = Permission(type: .microphone)
     
     /// The permission to access the camera.
-    open static let camera = Permission(type: .camera)
+//    open static let camera = Permission(type: .camera)
     
     /// The permission to access the user's photos.
-    open static let photos = Permission(type: .photos)
+//    open static let photos = Permission(type: .photos)
     
     /// The permission to access the user's reminders.
-    open static let reminders = Permission(type: .reminders)
+//    open static let reminders = Permission(type: .reminders)
     
     /// The permission to access the user's events.
-    open static let events = Permission(type: .events)
+//    open static let events = Permission(type: .events)
     
     /// The permission to access the user's bluetooth.
-    open static let bluetooth = Permission(type: .bluetooth)
+//    open static let bluetooth = Permission(type: .bluetooth)
     
     /// The permission to access the user's motion.
-    open static let motion = Permission(type: .motion)
+//    open static let motion = Permission(type: .motion)
     
     /// The permission to access the user's MediaLibrary.
-    @available(iOS 9.3, *)
-    open static let mediaLibrary = Permission(type: .mediaLibrary)
+//    @available(iOS 9.3, *)
+//    open static let mediaLibrary = Permission(type: .mediaLibrary)
 
     /// The permission to send notifications.
     open static let notifications: Permission = {
@@ -102,19 +102,19 @@ open class Permission: NSObject {
     /// The permission status.
     open var status: PermissionStatus {
         switch type {
-        case .contacts:          return statusContacts
-        case .addressBook:       return statusAddressBook
+//        case .contacts:          return statusContacts
+//        case .addressBook:       return statusAddressBook
         case .locationAlways:    return statusLocationAlways
         case .locationWhenInUse: return statusLocationWhenInUse
         case .notifications:     return statusNotifications
-        case .microphone:        return statusMicrophone
-        case .camera:            return statusCamera
-        case .photos:            return statusPhotos
-        case .reminders:         return statusReminders
-        case .events:            return statusEvents
-        case .bluetooth:         return statusBluetooth
-        case .motion:            return statusMotion
-        case .mediaLibrary:      return statusMediaLibrary
+//        case .microphone:        return statusMicrophone
+//        case .camera:            return statusCamera
+//        case .photos:            return statusPhotos
+//        case .reminders:         return statusReminders
+//        case .events:            return statusEvents
+//        case .bluetooth:         return statusBluetooth
+//        case .motion:            return statusMotion
+//        case .mediaLibrary:      return statusMediaLibrary
         }
     }
     
@@ -179,19 +179,19 @@ open class Permission: NSObject {
     
     internal func requestAuthorization(_ callback: @escaping Callback) {
         switch type {
-        case .contacts:          requestContacts(callback)
-        case .addressBook:       requestAddressBook(callback)
+//        case .contacts:          requestContacts(callback)
+//        case .addressBook:       requestAddressBook(callback)
         case .locationAlways:    requestLocationAlways(callback)
         case .locationWhenInUse: requestLocationWhenInUse(callback)
         case .notifications:     requestNotifications(callback)
-        case .microphone:        requestMicrophone(callback)
-        case .camera:            requestCamera(callback)
-        case .photos:            requestPhotos(callback)
-        case .reminders:         requestReminders(callback)
-        case .events:            requestEvents(callback)
-        case .bluetooth:         requestBluetooth(self.callback)
-        case .motion:            requestMotion(self.callback)
-        case .mediaLibrary:      requestMediaLibrary(callback)
+//        case .microphone:        requestMicrophone(callback)
+//        case .camera:            requestCamera(callback)
+//        case .photos:            requestPhotos(callback)
+//        case .reminders:         requestReminders(callback)
+//        case .events:            requestEvents(callback)
+//        case .bluetooth:         requestBluetooth(self.callback)
+//        case .motion:            requestMotion(self.callback)
+//        case .mediaLibrary:      requestMediaLibrary(callback)
         }
     }
     
